@@ -4,6 +4,12 @@ P.head_img {
     width: 12em
 }
 
+@font-face {
+    font-family: "Candara_1";
+    src: url("/Candara/candara.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
 /* Добавляем черный фон для панели навигации */
 .topnav {
@@ -16,10 +22,12 @@ P.head_img {
 /* Стили ссылок панели навигации */
 .topnav a {
     display: inline-block;
-    color: black;
+    color: white;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
+    padding: 18px 18px;
+    font: 1.6rem "Candara_1", sans-serif;
+    font-weight:bold;
+    font-family: "Candara_1"
 }
 
 /* Класс для выделения текущей страницы */
@@ -90,21 +98,55 @@ P.head_img {
 .alboms{
     margin-left: auto;
     margin-right: auto;
-    width: 48em
+    width: 52em;
+    padding: 12px;
 
 
 }
 
 
 
+.images_lives{
+    padding: 4px;
+}
+
+
+
+.head_text{
+    text-align: center;
+    margin-left: auto;
+    font-size: 1.8rem;
+    font-weight:bold;
+    width:auto;
+    margin-right: auto;
+    color: white;
+    font-family: "Candara_1"
+}
+
+.main_text{
+    color: white;
+    width:50rem;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-family: "Candara_1";
+}
 
 
 
 
 
-
-
-
+.down_panel{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width:30rem;
+    text-align: center;
+    color:white;
+    font-family: "Candara_1";
+    
+}
 
 
 
