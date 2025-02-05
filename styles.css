@@ -6,53 +6,106 @@ P.head_img {
 
 @font-face {
     font-family: "Candara_1";
-    src: url("/Candara/candara.ttf") format("truetype");
+    src: url("Candara/candara.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
-/* Добавляем черный фон для панели навигации */
+
 .topnav {
 
     overflow: hidden;
     text-align: center;
-    width:auto
+    width:auto;
+    padding-bottom:20px;
 }
 
-/* Стили ссылок панели навигации */
+
+
+.active {
+    text-decoration: none;
+
+
+}
+
+.active:after{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    content: "";}
+
+
+.no_active{
+    position: relative;
+    line-height: 1;
+    text-decoration: none;
+    width:auto;
+    cursor: grab;
+}
+
+
+
 .topnav a {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 18px 18px;
-    font: 2rem "Candara_1", sans-serif;
-    font-size:1.6rem;
+    font: 1.6rem "Candara_1", sans-serif;
     font-weight:bold;
     font-family: "Candara_1"
+    cursor: grab;
+    position: relative;
+
 }
 
-/* Класс для выделения текущей страницы */
-.active {
-    text-decoration: underline;
-}
-.no_active{
-    text-decoration: none;
+
+.no_active:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    content: "";
+    transition: width 0.3s ease-out;
 }
 
-/* Скрываем ссылку, которая открывает и закрывает панель на малых экранах */
+.no_active:hover:after,
+.no_active:focus:after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .topnav .icon {
     display: none;
     text-decoration: none;
 }
 
-/* Контейнер выпадающего блока — нужен для определения позиции */
+
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
-/* Стиль кнопки для активации выпадающего блока.
- *Подгоняем под панель навигации */
+
 .dropdown .dropbtn {
     font-size: 17px;
     border: none;
@@ -64,7 +117,7 @@ P.head_img {
     margin: 0;
 }
 
-/* Стиль выпадающего блока (по умолчанию скрыт) */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -74,7 +127,7 @@ P.head_img {
     z-index: 1;
 }
 
-/* Стиль ссылок внутри выпадающего блока */
+
 .dropdown-content a {
     float: none;
     color: black;
@@ -84,11 +137,9 @@ P.head_img {
     text-align: left;
 }
 
-/* Темный фон при наведении для ссылок панели навигации и
- *кнопки вызова выпадающего блока */
 
-/* Показываем выпадающее меню, когда пользователь
- *наводит мышь на кнопку выпадающего блока */
+
+
 .dropdown:hover .dropdown-content {
     display: block;
 
@@ -116,6 +167,10 @@ P.head_img {
 .head_text{
     text-align: center;
     margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-size: 1.8rem;
     font-weight:bold;
     width:auto;
@@ -146,14 +201,12 @@ P.head_img {
     text-align: center;
     color:white;
     font-family: "Candara_1";
-    
+
 }
 
 
 
-/* Когда ширина экрана меньше 600px, спрятать все ссылки,
- * кроме первой ("Главная"). Выводим ссылку, которая
- * открывает/закрывает панель навигации (.icon) */
+
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
         display: none;
@@ -164,10 +217,7 @@ P.head_img {
     }
 }
 
-/* Класс "responsive" добавляется к панели навигации
- * при помощи JavaScript, когда пользователь нажимает на иконку.
- * Этот класс оптимизирует панель навигации под маленькие экраны
- * (ссылки отображаются вертикально, а не горизонтально) */
+
 @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
