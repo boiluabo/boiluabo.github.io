@@ -104,44 +104,7 @@ ul {
 
 
 .container {
-  --min-deg: 0.1deg;
-  --max-deg: 0.15deg;
   background-color: #121212;
-  --general-gradient: repeating-conic-gradient(
-      from 0deg at 0% 0%,
-      orange 0 var(--min-deg),
-      blue var(--min-deg) var(--max-deg)
-    ),
-    repeating-conic-gradient(
-      from 0deg at 100% 0%,
-      orange 0 var(--min-deg),
-      blue var(--min-deg) var(--max-deg)
-    ),
-    repeating-conic-gradient(
-      from 0deg at 100% 100%,
-      orange 0 var(--min-deg),
-      blue var(--min-deg) var(--max-deg)
-    ),
-    repeating-conic-gradient(
-      from 0deg at 0% 100%,
-      orange 0 var(--min-deg),
-      blue var(--min-deg) var(--max-deg)
-    );
-
-  &,
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  &::before {
-    content: "";
-    background: var(--general-gradient);
-    background-blend-mode: difference;
-  }
 }
 
 @keyframes move {
