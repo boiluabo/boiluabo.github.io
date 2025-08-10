@@ -123,7 +123,7 @@ ul {
   );
   background-size: 40px 40px;
 
-  animation: move 1s linear infinite;
+  animation: move 10s linear infinite;
 }
 
 @keyframes move {
