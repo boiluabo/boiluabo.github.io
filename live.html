@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="links.css">
-  <title>mpec</title>
+  <title>mpeg</title>
   <script src="js.js"></script>
 
 </head>
@@ -31,10 +31,12 @@ const a = Array(223).fill().map((e, i) => i + 1).reverse()
 
 const od = document.querySelector('.images_')
 a.forEach(o => {
-  op = document.createElement('img')
-  op.width = 400
+  op = document.createElement('a')
 
-  op.src = `lives/${o}.jpg`;
+
+  op.href = `lives/${o}.jpg`;
+  op.style= `content:url(lives/${o}.jpg)${';width:400px'}`;;
+  op.width= 400;
   od.append(op)
 })
 </script>
