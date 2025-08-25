@@ -26,6 +26,13 @@
     clip-path: polygon(0% 0%, 170% 0%, 0% 170%);
 }
 
+
+
+.card-3:active{
+    box-shadow: 2px 2px 5px white;
+}
+
+
 .card .card-1:has(~ .card-2:hover),
 .card .card-1:has(~ .card-3:hover) {
     clip-path: polygon(0% 0%, 15% 0%, 0% 15%);
@@ -61,8 +68,9 @@
     transition: all 0.6s;
 }
 
+
 .card .card-1 {
-    content:url(1.jpg);
+    background:url(1.jpg);
     color: white;
 
 }
@@ -72,12 +80,16 @@
 }
 
 .card .card-2 {
-    content:url(2.jpg);
+    background:url(2.jpg);
 }
 
 .card .card-3 {
-    content:url(3.jpg);
+    background:url(3.jpg);
 }
 
 .card .card-3:hover {
 }
+
+
+
+
